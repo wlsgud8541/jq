@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+<link type="text/css" rel="stylesheet" href="/www/css/w3.css">
+<link type="text/css" rel="stylesheet" href="/www/css/smart.css">
+<script type="text/javascript" src="/www/js/jquery-3.6.1.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.w3-button').click(function(){
+			var txt = $('#id').val(); // var : 해당 태그에 입력된 값을 꺼내오는 함수	
+			if(!txt){
+				$('#id').val('입력부탁드립니다.');
+				$('#id').focus();
+				return;
+			}
+			$('.w3-content').append('<h1>' + txt + '</h1>');
+			$('.w3-content').children().last().addClass('w3-col w3-padding w3-margin-top w3-pink');
+		});
+		
+		$('h1').click(function(){
+			var txt = $(this).html(); // html() == innerHTML, text() == innerText 같은 기능	
+			if (!txt) {
+				alert('입력값이 존재하지 않습니다.');
+				return;
+			}
+			$('.w3-content').append('<h3>' + txt + '</h3>');
+			var el = $('.w3-content').children().last();
+			el.addClass('w3-col w3-padding w3-margin-top w3-blue');
+			el.html('읽은 데이터 : '+txt);
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content mxw700 w3-center">
+		 <h1 class="w3-deep-purple w3-padding w3-margin-bottom w3-card-4">jQuery Test</h1>
+		 <div class="w3-col w3-card-4 w3-padding">
+			<div>
+				<label for="id" class="w3-col m2 w3-right-align">ID : </label>
+				<div class="w3-col m9 pdl10">
+					<input type="text" name="id" id="id" placeholder="아이디 입력" class="w3-col w3-input w3-border">
+				</div>
+			</div>		 
+			<div>
+				<div class="w3-col w3-button w3-blue w3-margin-top">click</div>
+			</div>
+		 </div>
+	</div>
+</body>
+</html>

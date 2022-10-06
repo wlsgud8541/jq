@@ -1,0 +1,16 @@
+# day01.txt
+
+Dynamic Web Project 폴더 구조
+
+	Java Resources : 자바 소스 코드를 작성하는 폴더
+	WebContent	   : HTML, CSS, JavaScript, JSP 파일이 작성하는 폴더 => 화면(View) 파일들
+	
+================================	
+	WebContent 하위에
+	1. css
+	2. js
+	3. 폴더s
+	등 생성 가능
+	
+	이때 WebContent 파일은 루트(최상위) 폴더가 된다.
+===============================

@@ -1,0 +1,24 @@
+jQuery 사용방법
+
+
+1. 형식0] $ 와 jQuery 는 동일한 역할이기 때문에 형식 0번은 사용하지않음
+
+	jQuery(document).ready(function(){
+		실행 내용 작성
+	});
+
+
+
+1. 형식1]
+	
+	$(document).ready(function(){
+		실행 내용 작성
+		일반적인 jQuery script들이 작성되는 부분
+	});
+	
+	
+2. 형식2]
+
+	$(function(){
+		실행 내용 작성
+	});	
