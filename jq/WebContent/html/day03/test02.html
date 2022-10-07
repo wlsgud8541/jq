@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+<link type="text/css" rel="stylesheet" href="/www/css/w3.css">
+<link type="text/css" rel="stylesheet" href="/www/css/smart.css">
+<script type="text/javascript" src="/www/js/jquery-3.6.1.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var tag = '<h1 class ="w3-blue w3-padding w3-card-4">title</h1>'
+		$('.w3-content').attr('class', 'w3-content mxw700 w3-center').append(tag);
+		var txt = $('.w3-content').append('<div>').children().last().html('Last div').html();
+		alert(txt);
+//		$('.w3-content').append('<h1>');
+	});
+	/* 
+		prepend()를 쓸 경우 생성된 태그는 태그들의 가장 앞에 추가된다.
+		append()를 쓸 경우 생성된 태그는 태그들의 가장 마지막에 추가된다.
+	*/
+	
+	/*
+		JSP의 EL(Expression Language)의 형식
+			${변수}
+	*/
+	
+</script>
+</head>
+<body>
+	<div class="w3-content"></div>
+</body>
+</html>
