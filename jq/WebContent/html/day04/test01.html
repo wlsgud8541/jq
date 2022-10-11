@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+<link type="text/css" rel="stylesheet" href="/www/css/w3.css">
+<link type="text/css" rel="stylesheet" href="/www/css/smart.css">
+<script type="text/javascript" src="/www/js/jquery-3.6.1.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#id').change(function(){
+			var txt = $(this).val();
+			alert(txt);
+		});
+		
+/* 		$('#id').focusin(function(){
+			$(this).css('background-color','blue');
+		});
+
+		$('#id').focusout(function(){
+			$(this).css('background-color','pink');
+		}); */
+		
+		$('#repw').keyup(function(){
+			var spw = $('#pw').val();
+			if(!spw){
+				$('#pw').focus();
+				return;
+			}
+			var repw = $(this).val();
+			if (spw == repw) {
+				$('#pwmsg').html('비밀번호가 일치합니다.').removeClass('w3-text-red').addClass('w3-text-blue');
+			}else{
+				$('#pwmsg').html('비밀번호가 일치하지 않습니다.').removeClass('w3-text-blue').addClass('w3-text-red');
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content mxw700 w3-center">
+		<h1 class="w3-padding w3-card-4 w3-blue">Event Test</h1>
+		<div class="w3-margin-top">
+			<div class="w3-col mgb10">
+				<label for="id" class="w3-col m2 w3-right-align">I D : </label>
+				<div class="w3-col m9 pdl10">
+					<input type="text" name="id" id="id" class="w3-input w3-border" value="jennie">
+				</div>
+			</div>
+			<div class="w3-col mgb10">
+				<label for="pw" class="w3-col m2 w3-right-align">P W : </label>
+				<div class="w3-col m9 pdl10">
+					<input type="password" name="pw" id="pw" class="w3-input w3-border" placeholder="비밀번호를 입력하세요.">
+				</div>
+			</div>
+			<div class="w3-col">
+				<label for="repw" class="w3-col m2 w3-right-align">REPW : </label>
+				<div class="w3-col m9 pdl10 mgb10">
+					<input type="password" name="repw" id="repw" class="w3-input w3-border" placeholder="비밀번호를 확인하세요.">
+				</div>
+				<div class="w3-col" id="pwmsg"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

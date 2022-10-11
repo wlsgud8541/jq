@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+<link type="text/css" rel="stylesheet" href="/www/css/w3.css">
+<link type="text/css" rel="stylesheet" href="/www/css/smart.css">
+<script type="text/javascript" src="/www/js/jquery-3.6.1.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.mgb5').click(function(){
+			// 클릭된 태그의 값 속성값 읽어서 변수에 저장
+			var bno = $(this).attr('id');
+			console.log(bno);
+			// 읽은 데이터를 아이디가 bno인 태그에 삽입
+			$('#bno').val(bno);
+			// 폼태그에 전송
+			$('#frm').submit();
+		});
+	});
+</script>
+</head>
+<body>
+	<!-- 데이터 전송용 폼태그 -->
+	<form method="GET" action="result.html" name="frm" id="frm">
+		<input type="hidden" name="bno" id="bno">
+	</form>
+	
+	<div class="w3-content mxw700 w3-center">
+		<!-- 타이틀 -->
+		<h1 class="w3-blue w3-card-4 w3-padding w3-margin-bottom">15B Class Board</h1>
+		
+		<!-- 게시판 content -->
+		<div>
+			<!-- 게시판 header -->
+			<div class="w3-col w3-padding w3-border w3-light-gray w3-card-4 mgb20">
+				<div class="w3-col w3-border-right" style="width:120px;">글번호</div>
+				<div class="w3-col w3-border-right" style="width:120px;">작성자</div>
+				<div class="w3-col w3-right" style="width:90px;">조회수</div>
+				<div class="w3-col w3-border-right w3-right" style="width:120px;">작성일</div>
+				<div class= "w3-rest w3-border-right">글제목</div>
+			</div>
+			
+			<!-- 게시판 list -->
+			<div class="w3-col w3-padding w3-border w3-card mgb5" id="9999">
+				<div class="w3-col w3-border-right bno" style="width:120px;">9999</div>
+				<div class="w3-col w3-border-right" style="width: 120px;">jennie</div>
+				<div class="w3-col w3-right" style="width: 90px;">2</div>
+				<div class="w3-col w3-border-right w3-right" style="width:120px;">2022/10/11</div>
+				<div class= "w3-rest w3-border-right">안녕하세요1</div>
+			</div>
+			<div class="w3-col w3-padding w3-border w3-card mgb5" id="9998">
+				<div class="w3-col w3-border-right bno" style="width:120px;">9998</div>
+				<div class="w3-col w3-border-right" style="width:120px;">jennie</div>
+				<div class="w3-col w3-right" style="width:90px;">2</div>
+				<div class="w3-col w3-border-right w3-right" style="width:120px;">2022/10/11</div>
+				<div class= "w3-rest w3-border-right">안녕하세요2</div>
+			</div>
+			<div class="w3-col w3-padding w3-border w3-card mgb5" id="9997">
+				<div class="w3-col w3-border-right bno" style="width:120px;">9997</div>
+				<div class="w3-col w3-border-right" style="width:120px;">jennie</div>
+				<div class="w3-col w3-right" style="width:90px;">2</div>
+				<div class="w3-col w3-border-right w3-right" style="width:120px;">2022/10/11</div>
+				<div class= "w3-rest w3-border-right">안녕하세요3</div>
+			</div>
+			<div class="w3-col w3-padding w3-border w3-card mgb5" id="9996">
+				<div class="w3-col w3-border-right bno" style="width:120px;">9996</div>
+				<div class="w3-col w3-border-right" style="width:120px;">jennie</div>
+				<div class="w3-col w3-right" style="width:90px;">2</div>
+				<div class="w3-col w3-border-right w3-right" style="width:120px;">2022/10/11</div>
+				<div class= "w3-rest w3-border-right">안녕하세요4</div>
+			</div>
+			<div class="w3-col w3-padding w3-border w3-card mgb5" id="9995">
+				<div class="w3-col w3-border-right bno" style="width:120px;">9995</div>
+				<div class="w3-col w3-border-right" style="width:120px;">jennie</div>
+				<div class="w3-col w3-right" style="width:90px;">2</div>
+				<div class="w3-col w3-border-right w3-right" style="width:120px;">2022/10/11</div>
+				<div class= "w3-rest w3-border-right">안녕하세요5</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

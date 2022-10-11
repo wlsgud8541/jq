@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+<link type="text/css" rel="stylesheet" href="/www/css/w3.css">
+<link type="text/css" rel="stylesheet" href="/www/css/smart.css">
+<script type="text/javascript" src="/www/js/jquery-3.6.1.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//전달받은 데이터 꺼내기
+		var sno = location.search.substring(location.search.indexOf('=')+1);
+		console.log(sno);
+		$('#bno').html(sno);
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content mxw700 w3-center">
+		<h1 class="w3-purple w3-padding w3-card-4">Result Page</h1>
+		<div class="w3-margin-top">
+			<div class="w3-col">
+				<h3 class="w3-col m3 w3-right-alige">글번호 : </h3>
+				<h3 class="w3-col m9 w3-center" id="bno">0</h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
